@@ -166,7 +166,7 @@ const products = [
         title: 'Product 24',
         description: 'Product 24 description.',
         price: 209.99,
-    }, 
+    },
     {
         id: 25,
         image: 'product25.jpg',
