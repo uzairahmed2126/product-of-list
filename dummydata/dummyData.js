@@ -138,11 +138,42 @@ const products = [
         title: 'Product 20',
         description: 'Product 20 description.',
         price: 209.99,
-    }
+    },
+    {
+        id: 21,
+        image: 'product21.jpg',
+        title: 'Product 21',
+        description: 'Product 21 description.',
+        price: 209.99,
+    },
+    {
+        id: 22,
+        image: 'product22.jpg',
+        title: 'Product 22',
+        description: 'Product 22 description.',
+        price: 209.99,
+    },
+    {
+        id: 23,
+        image: 'product23.jpg',
+        title: 'Product 23',
+        description: 'Product 23 description.',
+        price: 209.99,
+    },
+    {
+        id: 24,
+        image: 'product24.jpg',
+        title: 'Product 24',
+        description: 'Product 24 description.',
+        price: 209.99,
+    }, 
+    {
+        id: 25,
+        image: 'product25.jpg',
+        title: 'Product 25',
+        description: 'Product 25 description.',
+        price: 209.99,
+    },
 ];
-
-// You now have an array of 20 products, each with all fields including "id".
-console.log(products);
-
 
 export default products;
