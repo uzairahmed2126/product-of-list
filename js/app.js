@@ -1,7 +1,49 @@
 import productData from "../dummydata/dummyData.js";
 document.addEventListener('DOMContentLoaded', () => {
     const productBody = document.getElementById('product-body');
+    const textInput = document.getElementById('text')
+    const tableHeading = document.getElementById('table-heading');
+    tableHeading.addEventListener('click', handleClick);
+    function handleClick(event) {
+        const sortedField = event.target.innerText;
+        console.log(sortedField)
+        productData.sort((a, b) => {
+            return a[sortedField] > b[sortedField] ? 1 : -1;
 
+        });
+        appendData();
+    };
+    // let a = [];
+    // for (let i = 65; i <= 90; i++) {
+    //     let b = String.fromCharCode([i]);
+    //     a.push(b);
+    // }
+    // textInput.addEventListener('input', (e) => {
+    //     let a = '';
+    //     let arr = [];
+    //     a = e.target.value;
+    //     console.log(a)
+    //     if(a.toUpperCase()){
+    //         a.toLowerCase();
+    //         console.log(a);
+    //     }else if(a.toLowerCase()){
+    //         a.toUpperCase()
+    //     }
+    //     else if(e.target.value===''){
+    //         a.split(' ');
+    //         const sortedField = e.target.innerText;
+    //         productData.sort((a, b) => {
+    //             return a[sortedField] > b[sortedField] ? 1 : -1;
+    
+    //         });
+    //         appendData();
+    //     }
+    //     else{
+    //         console.log('lower')
+    //     }
+    //     arr.push(a);
+    //     console.log(arr)
+    // })
     // Functionality Of Pagination.
     let initialPage = 1;
     let itemPerPage = 5;
@@ -63,16 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return newBtn;
     };
 
-    const tableHeading = document.getElementById('table-heading');
-    tableHeading.addEventListener('click', handleClick);
-    function handleClick(event) {
-        const sortedField = event.target.innerText;
-        productData.sort((a, b) => {
-            return a[sortedField] > b[sortedField] ? 1 : -1;
-
-        });
-        appendData();
-    };
     function createDiv() {
         const newDiv = document.createElement('div');
         return newDiv;
